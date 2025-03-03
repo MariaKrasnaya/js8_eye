@@ -1,0 +1,59 @@
+body{
+  width: 100%;
+  overflow-x: hidden;
+  height: 200vw;
+}
+
+.move_area{
+width: 100vw;
+height: 50vw;
+background-color: lightgoldenrodyellow;
+display: flex;
+gap: 2%;
+justify-content: center;
+}
+
+.container {
+margin-top: 10%;
+}
+
+.eye{
+  position: relative;
+  border-radius: 50%;
+  height: 6vw;
+  width: 6vw;
+  background: #fff;
+  border: 0.2px solid black;
+
+}
+
+.eye:after{
+  /* это псевдокласс див в диве, можно было и в html это прописать, просто через псевдокласс проще и логичнее */
+  /* зрачок */
+  bottom: 0.5vw;
+  position: absolute;
+  right: 1vw;
+  height: 2vw;
+  width: 2vw;
+  background-color: darkslategray;
+  border-radius: 50%;
+  border: 0.2px solid black;
+  content: " ";
+}
+
+.cursor {
+position: absolute;
+height: 2vw;
+width: 2vw;
+border-radius: 50%;
+background: chartreuse;
+animation: colors 10s infinite linear;
+}
+
+@keyframes colors {
+  0%{background-color: chartreuse;}
+  20%{background-color: red;}
+  50%{background-color: orange;}
+  80%{background-color: blue;}
+  100%{background-color: chartreuse;}
+}
